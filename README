@@ -1,0 +1,14 @@
+Joseph Heller
+
+Quick REAMDME. 
+
+1. Use CyanogenMod ICS (9.1.0) as base. For this to work, you need to have basic skills in building CM ROM's already. 
+
+2. Download original kernel for the HTC Desire SV from htcdev.com
+
+3. Source should build now...
+cd ~/android/system		(goto root directory of CM)
+source build/envsetup.sh	(sets build environment; e.g. this sets paths to "lunch" commands)
+lunch cm_magnids-eng		(sets the build system for the device)
+make clobber			(removes build directory to ensure completely fresh rebuild)
+make -j12 recoveryimage		(builds recovery image by a 6-core host)
